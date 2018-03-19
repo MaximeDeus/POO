@@ -1,0 +1,21 @@
+package pfc.strategy;
+
+import pfc.util.Input;
+
+public class stratByPlayer implements Strategy{
+    public Choice getChoice(){
+        printf("take option between Rock,Scissor,Paper");
+        String strat = readString();
+        switch(strat){
+            case "Rock":
+                return Choice.Rock;
+            case "Scissor":
+                return Choice.Scissor;
+            case "Paper":
+                return Choice.Paper;
+            default:
+                throw new Exception("Error: The attribut is not valid!");
+        }
+    }
+
+}
